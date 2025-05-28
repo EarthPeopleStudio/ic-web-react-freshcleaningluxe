@@ -18,7 +18,7 @@ const FAQ: React.FC = () => {
   const faqItems: FAQItem[] = [
     {
       question: "What cleaning services do you offer in Utah County?",
-      answer: "We offer a wide range of cleaning services throughout Utah County including residential cleaning, commercial cleaning, deep cleaning, move-in/move-out cleaning, post-construction cleaning, carpet cleaning, and specialized cleaning services. We serve Spanish Fork, Payson, Provo, Salem, and surrounding areas.",
+      answer: "We offer a wide range of cleaning services throughout Utah including residential cleaning, commercial cleaning, deep cleaning, move-in/move-out cleaning, post-construction cleaning, carpet cleaning, and specialized cleaning services. We serve all of Utah.",
       category: "services"
     },
     {
@@ -33,7 +33,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What areas in Utah do you service?",
-      answer: "We proudly serve Utah County including Spanish Fork, Payson, Provo, Salem, Springville, Mapleton, and surrounding communities. If you're unsure if we service your area, please contact us directly.",
+      answer: "We proudly serve throughout the entire state of Utah. If you have any questions about our service area, please contact us directly.",
       category: "services"
     },
     {

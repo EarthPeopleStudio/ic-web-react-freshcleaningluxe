@@ -436,6 +436,13 @@
   .footer-logo {
     width: 150px;
     margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    margin: 0 auto;
     display: block;
   }
   
@@ -448,6 +455,20 @@
     font-size: 1.1rem;
     margin-bottom: 1rem;
     text-align: center;
+  }
+  
+  .footer-cta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-cta .btn-primary {
+    margin: 0 auto;
+    display: block;
+    max-width: 250px;
+    width: 100%;
   }
   
   .footer-links-container {

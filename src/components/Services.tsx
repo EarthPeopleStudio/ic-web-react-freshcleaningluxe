@@ -224,7 +224,7 @@ const Services: React.FC = () => {
                       
                       <div className="contact-info-small">
                         <p>📩 Contact us: <a href="mailto:book@freshcleaningluxe.com">book@freshcleaningluxe.com</a></p>
-                        <p>🏠 Serving Spanish Fork and surrounding areas</p>
+                        <p>🏠 Serving throughout Utah</p>
                       </div>
                     </div>
                     

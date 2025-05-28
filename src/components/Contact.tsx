@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
                 <div className="contact-icon">📍</div>
                 <div className="contact-detail">
                   <h3>Service Area</h3>
-                  <p className="get-in-touch-area">Spanish Fork, Payson, Provo, Salem & surrounding areas</p>
+                  <p className="get-in-touch-area">We serve throughout Utah</p>
                 </div>
               </div>
             </div>

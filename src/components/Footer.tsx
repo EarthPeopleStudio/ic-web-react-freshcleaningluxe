@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
           
           <div className="footer-areas">
             <h4>Service Areas</h4>
-            <p>Serving Utah County: Spanish Fork, Payson, Provo, Salem & surrounding areas.</p>
+            <p>Serving throughout Utah.</p>
             <div className="footer-cta">
               <Link to="/book" className="btn-primary" onClick={handleNavClick}>BOOK YOUR FREE QUOTE</Link>
             </div>

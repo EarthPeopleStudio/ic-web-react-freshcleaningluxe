@@ -26,8 +26,8 @@ const TermsConditions: React.FC = () => {
           <section className="legal-section">
             <h2>Service Description</h2>
             <p>
-              Fresh Cleaning Luxe, LLC provides professional cleaning services for residential and commercial properties in 
-              Spanish Fork, Payson, Provo, Salem, and surrounding areas in Utah County.
+              Fresh Cleaning Luxe, LLC provides professional cleaning services for residential and commercial properties 
+              throughout Utah.
             </p>
           </section>
           

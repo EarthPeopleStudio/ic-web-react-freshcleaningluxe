@@ -68,7 +68,7 @@ function App() {
               <Route path="/" element={
                 <main>
                   <PageTitle title="Home | Fresh Cleaning Luxe | Professional Cleaning Services" />
-                  <section id="home">
+                  <section id="home" className="home-section">
                     <Hero />
                   </section>
                   <Services />

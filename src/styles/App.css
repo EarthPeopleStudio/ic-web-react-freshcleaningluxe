@@ -241,4 +241,21 @@ html, body {
 .page-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Home section spacing */
+.home-section {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    margin-bottom: -2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-section {
+    margin-bottom: -3rem;
+  }
 } 
