@@ -1,0 +1,7 @@
+[build]
+  command = "CI=false npm run build"
+  publish = "build"
+
+[build.environment]
+  REACT_APP_WEB3FORMS_KEY = "${REACT_APP_WEB3FORMS_KEY}"
+  CI = "false" 

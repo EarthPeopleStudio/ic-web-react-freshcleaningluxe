@@ -115,7 +115,6 @@ const QuoteForm: React.FC = () => {
   // Function to generate a unique order number
   const generateOrderNumber = (): string => {
     const prefix = 'SUW';
-    const dateStr = new Date().toISOString().replace(/[-:T.]/g, '').slice(0, 12);
     
     // Use serviceType and size to make it more unique (first characters)
     const serviceChar = formData.serviceType.charAt(0).toUpperCase() || 'X';

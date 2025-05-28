@@ -26,7 +26,6 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
   const sliderRef = useRef<HTMLDivElement>(null);
   const afterImageRef = useRef<HTMLImageElement>(null);
   const slidingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const sparkleTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const lastPositionRef = useRef<number>(50);
   
   // Show sparkles on initial load
@@ -53,8 +52,10 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
     }
     
     return () => {
-      if (afterImageRef.current) {
-        afterImageRef.current.removeEventListener('load', handleImageLoad);
+      // Create a local variable to keep reference to afterImageRef.current
+      const imageElement = afterImageRef.current;
+      if (imageElement) {
+        imageElement.removeEventListener('load', handleImageLoad);
       }
     };
   }, []);
