@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/FAQ.css';
-import SEO from '../utils/SEO';
+import SEOv2 from '../utils/SEOv2';
 
 interface FAQItem {
   question: string;
@@ -107,8 +107,7 @@ const FAQ: React.FC = () => {
   
   return (
     <section className="faq-section" id="faq">
-      <SEO 
-        schemaType="FAQPage"
+      <SEOv2 
         title="Cleaning Services FAQ | Fresh Cleaning Luxe | Utah County"
         description="Frequently asked questions about our professional cleaning services in Utah County. Learn about our pricing, service areas, and cleaning processes."
         keywords="cleaning services FAQ, house cleaning questions Utah, maid service cost Utah County, professional cleaners Spanish Fork, cleaning company questions Provo"

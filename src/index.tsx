@@ -3,16 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import App from './App';
 import reportWebVitals from './utils/reportWebVitals';
-import SEOProvider from './utils/SEOProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <SEOProvider>
-      <App />
-    </SEOProvider>
+    <App />
   </React.StrictMode>
 );
 

@@ -15,7 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import CookiePolicy from './pages/CookiePolicy';
 import NotFound from './pages/NotFound';
-import SEO from './utils/SEO';
+import SEOv2 from './utils/SEOv2';
 import { useBreakpoint } from './utils/ResponsiveUtils';
 
 // Page transition wrapper component
@@ -61,7 +61,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
-        <SEO />
+        <SEOv2 />
         <NavBar />
         <div className="content">
           <PageTransition>
