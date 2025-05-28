@@ -15,6 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import CookiePolicy from './pages/CookiePolicy';
 import NotFound from './pages/NotFound';
+import PageTitle from './utils/PageTitle';
 import { useBreakpoint } from './utils/ResponsiveUtils';
 
 // Page transition wrapper component
@@ -53,60 +54,12 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
-// TitleManager component to update page title based on current route
-const TitleManager: React.FC = () => {
-  const location = useLocation();
-  
-  useEffect(() => {
-    // Set page title based on current route
-    let pageTitle = 'Fresh Cleaning Luxe | Professional Cleaning Services';
-    
-    switch (location.pathname) {
-      case '/':
-        pageTitle = 'Home | Fresh Cleaning Luxe | Professional Cleaning Services';
-        break;
-      case '/services':
-        pageTitle = 'Our Services | Fresh Cleaning Luxe | Professional Cleaning';
-        break;
-      case '/book':
-        pageTitle = 'Book a Cleaning | Fresh Cleaning Luxe';
-        break;
-      case '/journey':
-        pageTitle = 'Our Journey | Fresh Cleaning Luxe | About Us';
-        break;
-      case '/contact':
-        pageTitle = 'Contact Us | Fresh Cleaning Luxe';
-        break;
-      case '/privacy-policy':
-        pageTitle = 'Privacy Policy | Fresh Cleaning Luxe';
-        break;
-      case '/terms-conditions':
-        pageTitle = 'Terms & Conditions | Fresh Cleaning Luxe';
-        break;
-      case '/cookie-policy':
-        pageTitle = 'Cookie Policy | Fresh Cleaning Luxe';
-        break;
-      default:
-        if (location.pathname.includes('/faq')) {
-          pageTitle = 'FAQ | Fresh Cleaning Luxe';
-        } else {
-          pageTitle = 'Page Not Found | Fresh Cleaning Luxe';
-        }
-    }
-    
-    document.title = pageTitle;
-  }, [location]);
-  
-  return null;
-};
-
 function App() {
   const breakpoint = useBreakpoint();
   
   return (
     <Router>
       <ScrollToTop />
-      <TitleManager />
       <div className="App">
         <NavBar />
         <div className="content">
@@ -114,6 +67,7 @@ function App() {
             <Routes>
               <Route path="/" element={
                 <main>
+                  <PageTitle title="Home | Fresh Cleaning Luxe | Professional Cleaning Services" />
                   <section id="home">
                     <Hero />
                   </section>
@@ -122,20 +76,56 @@ function App() {
                   <Contact />
                 </main>
               } />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/book" element={<QuotePage />} />
-              <Route path="/journey" element={<HistoryPage />} />
+              <Route path="/services" element={
+                <>
+                  <PageTitle title="Our Services | Fresh Cleaning Luxe | Professional Cleaning" />
+                  <ServicesPage />
+                </>
+              } />
+              <Route path="/book" element={
+                <>
+                  <PageTitle title="Book a Cleaning | Fresh Cleaning Luxe" />
+                  <QuotePage />
+                </>
+              } />
+              <Route path="/journey" element={
+                <>
+                  <PageTitle title="Our Journey | Fresh Cleaning Luxe | About Us" />
+                  <HistoryPage />
+                </>
+              } />
               <Route path="/contact" element={
                 <main>
+                  <PageTitle title="Contact Us | Fresh Cleaning Luxe" />
                   <section id="contact-page" style={{ paddingTop: breakpoint === 'xs' || breakpoint === 'sm' ? '80px' : '120px' }}>
                     <Contact />
                   </section>
                 </main>
               } />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-conditions" element={<TermsConditions />} />
-              <Route path="/cookie-policy" element={<CookiePolicy />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/privacy-policy" element={
+                <>
+                  <PageTitle title="Privacy Policy | Fresh Cleaning Luxe" />
+                  <PrivacyPolicy />
+                </>
+              } />
+              <Route path="/terms-conditions" element={
+                <>
+                  <PageTitle title="Terms & Conditions | Fresh Cleaning Luxe" />
+                  <TermsConditions />
+                </>
+              } />
+              <Route path="/cookie-policy" element={
+                <>
+                  <PageTitle title="Cookie Policy | Fresh Cleaning Luxe" />
+                  <CookiePolicy />
+                </>
+              } />
+              <Route path="*" element={
+                <>
+                  <PageTitle title="Page Not Found | Fresh Cleaning Luxe" />
+                  <NotFound />
+                </>
+              } />
             </Routes>
           </PageTransition>
         </div>
