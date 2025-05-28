@@ -3,16 +3,10 @@ import QuoteForm from '../components/QuoteForm';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import '../styles/QuotePage.css';
 import Icon24 from '../assets/img/24.png';
-import SEOv2 from '../utils/SEOv2';
 
 const QuotePage: React.FC = () => {
   return (
     <main className="quote-page">
-      <SEOv2 
-        title="Get Your Free Cleaning Quote | Fresh Cleaning Luxe | Utah County"
-        description="Request a free, no-obligation cleaning quote for your home or business in Utah County. Professional cleaning services in Spanish Fork, Payson, Provo, Salem."
-        keywords="cleaning quote, free cleaning estimate, house cleaning cost Utah County, commercial cleaning quote, deep cleaning services price, affordable cleaning service Utah"
-      />
       <div className="quote-page-header">
         <h1>Request Your Free Quote</h1>
         <div className="hours-banner">

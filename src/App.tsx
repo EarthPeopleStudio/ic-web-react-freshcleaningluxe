@@ -15,7 +15,6 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import CookiePolicy from './pages/CookiePolicy';
 import NotFound from './pages/NotFound';
-import SEOv2 from './utils/SEOv2';
 import { useBreakpoint } from './utils/ResponsiveUtils';
 
 // Page transition wrapper component
@@ -54,14 +53,61 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
+// TitleManager component to update page title based on current route
+const TitleManager: React.FC = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Set page title based on current route
+    let pageTitle = 'Fresh Cleaning Luxe | Professional Cleaning Services';
+    
+    switch (location.pathname) {
+      case '/':
+        pageTitle = 'Home | Fresh Cleaning Luxe | Professional Cleaning Services';
+        break;
+      case '/services':
+        pageTitle = 'Our Services | Fresh Cleaning Luxe | Professional Cleaning';
+        break;
+      case '/book':
+        pageTitle = 'Book a Cleaning | Fresh Cleaning Luxe';
+        break;
+      case '/journey':
+        pageTitle = 'Our Journey | Fresh Cleaning Luxe | About Us';
+        break;
+      case '/contact':
+        pageTitle = 'Contact Us | Fresh Cleaning Luxe';
+        break;
+      case '/privacy-policy':
+        pageTitle = 'Privacy Policy | Fresh Cleaning Luxe';
+        break;
+      case '/terms-conditions':
+        pageTitle = 'Terms & Conditions | Fresh Cleaning Luxe';
+        break;
+      case '/cookie-policy':
+        pageTitle = 'Cookie Policy | Fresh Cleaning Luxe';
+        break;
+      default:
+        if (location.pathname.includes('/faq')) {
+          pageTitle = 'FAQ | Fresh Cleaning Luxe';
+        } else {
+          pageTitle = 'Page Not Found | Fresh Cleaning Luxe';
+        }
+    }
+    
+    document.title = pageTitle;
+  }, [location]);
+  
+  return null;
+};
+
 function App() {
   const breakpoint = useBreakpoint();
   
   return (
     <Router>
       <ScrollToTop />
+      <TitleManager />
       <div className="App">
-        <SEOv2 />
         <NavBar />
         <div className="content">
           <PageTransition>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/FAQ.css';
-import SEOv2 from '../utils/SEOv2';
 
 interface FAQItem {
   question: string;
@@ -87,32 +86,8 @@ const FAQ: React.FC = () => {
     ? faqItems 
     : faqItems.filter(item => item.category === activeCategory);
   
-  // Generate FAQ schema for SEO
-  const generateFAQSchema = () => {
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map(item => ({
-        "@type": "Question",
-        "name": item.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": item.answer
-        }
-      }))
-    };
-    
-    return JSON.stringify(faqSchema);
-  };
-  
   return (
     <section className="faq-section" id="faq">
-      <SEOv2 
-        title="Cleaning Services FAQ | Fresh Cleaning Luxe | Utah County"
-        description="Frequently asked questions about our professional cleaning services in Utah County. Learn about our pricing, service areas, and cleaning processes."
-        keywords="cleaning services FAQ, house cleaning questions Utah, maid service cost Utah County, professional cleaners Spanish Fork, cleaning company questions Provo"
-      />
-      
       <div className="container">
         <h2 className="section-title">Frequently Asked Questions</h2>
         <p className="section-subtitle">Common questions about our cleaning services in Utah County</p>
@@ -154,9 +129,6 @@ const FAQ: React.FC = () => {
           <a href="/contact" className="btn-primary">Contact Us</a>
         </div>
       </div>
-      
-      {/* Add FAQ Schema for SEO */}
-      <script type="application/ld+json">{generateFAQSchema()}</script>
     </section>
   );
 };

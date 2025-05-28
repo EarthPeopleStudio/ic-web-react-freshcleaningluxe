@@ -319,7 +319,7 @@ const QuoteForm: React.FC = () => {
         
         // Create the payload - use text rather than HTML to ensure proper rendering
         const data = {
-          access_key: process.env.REACT_APP_WEB3FORMS_KEY || 'e8265d49-6a46-4fc8-acd5-a74f3ba286fd',
+          access_key: 'e8265d49-6a46-4fc8-acd5-a74f3ba286fd',
           subject: `Fresh Cleaning Luxe - Order #${newOrderNumber} - Quote Request from ${formData.name}`,
           from_name: 'Fresh Cleaning Luxe Website',
           to_email: "book@freshcleaningluxe.com",
