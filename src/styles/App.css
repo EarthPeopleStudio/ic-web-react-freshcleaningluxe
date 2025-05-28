@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import './theme.css';
+
+:root {
+  --primary-blue: var(--blue-600);
+  --primary-blue-dark: var(--blue-700);
+  --primary-blue-light: var(--blue-400);
+  --primary-green: var(--green-600);
+  --primary-green-dark: var(--green-700);
+  --primary-yellow: #ffde59;
+  --primary-red: #e63946;
+  --text-dark: var(--gray-900);
+  --text-medium: var(--gray-700);
+  --text-light: var(--gray-600);
+  --bg-light: var(--gray-100);
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--text-dark);
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+.App {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Global button styles */
+.btn {
+  display: inline-block;
+  padding: clamp(0.7rem, 2vw, 1rem) clamp(1.2rem, 3vw, 2rem);
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-base);
+  text-align: center;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--gray-300);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-blue {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.btn-blue:hover {
+  background-color: var(--primary-blue-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive button adjustments */
+@media (max-width: 1200px) {
+  .btn {
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn {
+    padding: 0.85rem 1.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Section styles */
+.section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+  color: var(--primary-blue);
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-light);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-8);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+/* Mobile viewport fix */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+/* Responsive container */
+.content-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive video embeds */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Common section styles */
+.section {
+  padding: var(--space-9) 0;
+}
+
+@media (max-width: 992px) {
+  .section {
+    padding: var(--space-7) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-6) 0;
+  }
+  
+  .content-container {
+    padding: 0 var(--space-3);
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: var(--space-5) 0;
+  }
+  
+  .content-container {
+    padding: 0 var(--space-2);
+  }
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Page transitions */
+.page-transition {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.page-visible {
+  opacity: 1;
+  transform: translateY(0);
+} 

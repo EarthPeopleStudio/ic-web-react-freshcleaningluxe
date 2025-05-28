@@ -1,0 +1,89 @@
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--bg-light);
+}
+
+.not-found-content {
+  max-width: 500px;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.not-found-page h1 {
+  font-size: 8rem;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.not-found-page h2 {
+  font-size: 2rem;
+  margin: 1rem 0 1.5rem;
+  color: var(--text-dark);
+}
+
+.not-found-page p {
+  margin-bottom: 2rem;
+  color: var(--text-medium);
+  font-size: 1.1rem;
+}
+
+.not-found-page .btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.not-found-page .btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .not-found-content {
+    padding: 2rem;
+  }
+  
+  .not-found-page h1 {
+    font-size: 6rem;
+  }
+  
+  .not-found-page h2 {
+    font-size: 1.6rem;
+    margin: 0.8rem 0 1.2rem;
+  }
+  
+  .not-found-page p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-content {
+    padding: 1.5rem;
+  }
+  
+  .not-found-page h1 {
+    font-size: 5rem;
+  }
+  
+  .not-found-page h2 {
+    font-size: 1.4rem;
+  }
+  
+  .not-found-page p {
+    font-size: 0.9rem;
+  }
+} 

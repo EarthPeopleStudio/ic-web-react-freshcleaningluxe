@@ -1,0 +1,150 @@
+.quote-page {
+  padding: 120px 1.5rem 5rem;
+  background-color: var(--bg-light);
+  min-height: 100vh;
+}
+
+.quote-page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.quote-page-header h1 {
+  color: var(--primary-blue);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hours-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto 2rem;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-24 {
+  max-width: 120px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.attribution {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attribution a {
+  color: #666;
+  text-decoration: none;
+}
+
+.icon-container:hover .attribution {
+  opacity: 1;
+}
+
+.quote-page-header p {
+  color: var(--text-medium);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .quote-page {
+    padding: 110px 1rem 4rem;
+  }
+  
+  .quote-page-header {
+    margin: 0 auto 2.5rem;
+  }
+  
+  .quote-page-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-page {
+    padding: 100px 1rem 3rem;
+  }
+  
+  .quote-page-header {
+    margin: 0 auto 2rem;
+    max-width: 600px;
+  }
+  
+  .quote-page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .icon-24 {
+    max-width: 100px;
+  }
+  
+  .quote-page-header p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .quote-page {
+    padding: 90px 0.8rem 2rem;
+  }
+  
+  .quote-page-header {
+    margin: 0 auto 1.5rem;
+  }
+  
+  .quote-page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .icon-24 {
+    max-width: 80px;
+  }
+  
+  .quote-page-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+  
+  .hours-banner {
+    margin: 1rem auto 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-page {
+    padding: 80px 0.5rem 1.5rem;
+  }
+  
+  .quote-page-header h1 {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+  }
+  
+  .icon-24 {
+    max-width: 70px;
+  }
+} 

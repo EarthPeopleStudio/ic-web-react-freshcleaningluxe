@@ -1,0 +1,142 @@
+/* 
+  responsive.css - Responsive design system for Fresh Cleaning Luxe
+  Consistent breakpoints and responsive utilities
+*/
+
+/* Base responsive breakpoints */
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+/* Responsive container classes */
+.container {
+  width: 100%;
+  padding-right: var(--space-4);
+  padding-left: var(--space-4);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Responsive display utilities */
+@media (max-width: 575.98px) {
+  .d-none-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .d-none-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .d-none-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .d-none-lg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-none-xl {
+    display: none !important;
+  }
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 767.98px) {
+  .mt-sm-2 { margin-top: var(--space-2) !important; }
+  .mt-sm-3 { margin-top: var(--space-3) !important; }
+  .mt-sm-4 { margin-top: var(--space-4) !important; }
+  .mb-sm-2 { margin-bottom: var(--space-2) !important; }
+  .mb-sm-3 { margin-bottom: var(--space-3) !important; }
+  .mb-sm-4 { margin-bottom: var(--space-4) !important; }
+  .p-sm-2 { padding: var(--space-2) !important; }
+  .p-sm-3 { padding: var(--space-3) !important; }
+  .p-sm-4 { padding: var(--space-4) !important; }
+}
+
+/* Responsive text utilities */
+@media (max-width: 767.98px) {
+  .text-center-sm {
+    text-align: center !important;
+  }
+  .text-left-sm {
+    text-align: left !important;
+  }
+  .text-right-sm {
+    text-align: right !important;
+  }
+}
+
+/* Responsive flex utilities */
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+@media (max-width: 767.98px) {
+  .flex-column-sm {
+    flex-direction: column !important;
+  }
+  .flex-row-sm {
+    flex-direction: row !important;
+  }
+}
+
+/* Mobile-optimized button sizes */
+@media (max-width: 576px) {
+  .btn-mobile-full {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: block !important;
+  }
+} 

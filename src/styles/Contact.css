@@ -1,0 +1,426 @@
+.contact {
+  padding: 5rem 0;
+  background-color: var(--bg-light);
+}
+
+.contact .container {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Testimonials */
+.testimonials {
+  flex: 1;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-text p {
+  color: var(--white);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.testimonial-author p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+}
+
+.contact-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.contact-heading h2 {
+  font-size: 2.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-heading p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-detail h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.contact-detail p {
+  font-size: 1rem;
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+/* Get In Touch specific styles */
+.get-in-touch-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-dark) !important;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 1.5;
+  text-align: left;
+  display: block;
+}
+
+.get-in-touch-contact {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.get-in-touch-phone {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.get-in-touch-email {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.get-in-touch-area {
+  font-size: 1rem;
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-align: left;
+  display: block;
+}
+
+.contact-detail a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Make sure links in Get In Touch use the correct color */
+.get-in-touch-phone a,
+.get-in-touch-email a {
+  color: var(--text-dark) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin: 0;
+  padding: 0;
+}
+
+/* Preserve hover effect */
+.get-in-touch-phone a:hover,
+.get-in-touch-email a:hover {
+  color: var(--primary-green) !important;
+}
+
+/* Social media buttons */
+.contact-social {
+  margin-bottom: 2.5rem;
+}
+
+.contact-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--bg-light);
+  border-radius: 5px;
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: relative;
+  isolation: isolate;
+}
+
+.contact-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  z-index: 5;
+}
+
+.social-button:hover {
+  background-color: var(--primary-blue);
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 98, 204, 0.2);
+}
+
+.social-button:hover svg {
+  color: white;
+}
+
+.social-button:hover span {
+  color: white;
+}
+
+.social-button svg {
+  flex-shrink: 0;
+  color: var(--primary-blue);
+  transition: color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.social-button span {
+  color: var(--primary-blue);
+  transition: color 0.3s;
+}
+
+.contact-cta {
+  text-align: center;
+}
+
+.book-quote-btn {
+  color: white !important;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .contact .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .testimonials h2,
+  .contact-heading h2 {
+    font-size: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3.5rem 0;
+  }
+  
+  .testimonials h2,
+  .contact-heading h2 {
+    font-size: 1.8rem;
+  }
+  
+  .testimonial-text p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-card {
+    padding: 2rem;
+  }
+  
+  .social-buttons {
+    justify-content: center;
+  }
+
+  .contact-heading p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-methods {
+    gap: 1.2rem;
+  }
+
+  .contact-detail h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 3rem 0;
+  }
+
+  .testimonials h2,
+  .contact-heading h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .testimonial-text p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 50;
+  }
+  
+  .social-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    flex: 1;
+    justify-content: center;
+    min-width: 120px;
+    position: relative;
+    z-index: 51;
+  }
+  
+  .contact-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    z-index: 52;
+  }
+  
+  .social-button svg {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    z-index: 53;
+  }
+
+  .contact-heading p {
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+
+  .book-quote-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.8rem 1rem;
+  }
+  
+  .contact-icon-wrapper {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+} 
