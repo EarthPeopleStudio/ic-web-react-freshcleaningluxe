@@ -3,4 +3,9 @@
   publish = "build"
 
 [build.environment]
-  CI = "false" 
+  CI = "false"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 

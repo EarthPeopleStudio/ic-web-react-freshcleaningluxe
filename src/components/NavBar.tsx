@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/NavBar.css';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
@@ -7,6 +7,24 @@ import { scrollToTop } from '../utils/scrollToTop';
 const NavBar: React.FC = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   const isActive = (path: string) => {
     return location.pathname === path ? 'active' : '';
@@ -18,13 +36,14 @@ const NavBar: React.FC = () => {
   
   const handleNavClick = () => {
     scrollToTop();
+    setMobileMenuOpen(false);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="logo-container">
-          <Link to="/">
+          <Link to="/" onClick={handleNavClick}>
             <img src={logo} alt="Fresh Cleaning Luxe, LLC" className="company-logo" />
             <div className="company-name">
               <h1>FRESH <span>CLEANING LUXE, LLC</span></h1>

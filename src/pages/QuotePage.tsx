@@ -2,6 +2,7 @@ import React from 'react';
 import QuoteForm from '../components/QuoteForm';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import '../styles/QuotePage.css';
+import img24 from '../assets/img/24.png';
 
 const QuotePage: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const QuotePage: React.FC = () => {
         <h1>Request Your Free Quote</h1>
         <div className="hours-banner">
           <div className="icon-container">
-            <div className="icon-24">24/7</div>
+            <img src={img24} alt="24/7" />
             <div className="attribution">
               Available around the clock
             </div>

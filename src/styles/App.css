@@ -37,6 +37,10 @@ body {
   min-height: 100vh;
 }
 
+.content {
+  margin-top: 85px;
+}
+
 main {
   flex: 1;
 }
@@ -257,5 +261,11 @@ html, body {
 @media (max-width: 576px) {
   .home-section {
     margin-bottom: -3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin-top: 85px;
   }
 } 
