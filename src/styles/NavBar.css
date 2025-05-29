@@ -30,13 +30,14 @@
 
 .logo-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin-right: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .logo-container a {
   display: flex;
-  align-items: center;
+  align-items: end;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
@@ -49,8 +50,14 @@
   height: 110px;
   margin-right: 1rem;
   transition: transform 0.3s ease;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.company-name {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .company-name h1 {
@@ -66,19 +73,13 @@
 }
 
 .company-name h1::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary-green), transparent);
+  display: none;
 }
 
 .company-name h1 span {
   display: block;
   font-size: 0.9rem;
-  color: var(--text-medium);
+  color: var(--primary-blue);
   margin-top: 2px;
 }
 
@@ -182,23 +183,22 @@ button:hover, button:focus, button:active {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-green), #35a74c);
+  background: linear-gradient(135deg, var(--primary-blue), #1357b0);
   color: white;
   text-decoration: none;
   padding: 0.8rem 1.4rem;
   border-radius: 6px;
   font-weight: 600;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(54, 180, 74, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 98, 204, 0.25);
   transition: all 0.3s ease;
   text-transform: uppercase;
   font-size: 0.85rem;
   white-space: nowrap;
   letter-spacing: 0.5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
   border: none;
 }
 
@@ -211,14 +211,10 @@ button:hover, button:focus, button:active {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #35a74c, var(--primary-green));
+  background: linear-gradient(135deg, #1357b0, var(--primary-blue));
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(54, 180, 74, 0.4);
-}
-
-.btn-primary:hover svg {
-  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 98, 204, 0.4);
 }
 
 .btn-blue {
@@ -267,6 +263,8 @@ button:hover, button:focus, button:active {
   height: 21px;
   cursor: pointer;
   z-index: 200;
+  padding: 0;
+  margin-right: 0;
 }
 
 .mobile-menu-btn span {
@@ -324,6 +322,7 @@ button:hover, button:focus, button:active {
   }
   
   .nav-buttons {
+    display: flex;
     flex-direction: column;
     width: 100%;
     margin: 2rem 0;
@@ -336,6 +335,9 @@ button:hover, button:focus, button:active {
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    height: 3.2rem;
+    display: flex;
+    align-items: center;
   }
   
   .nav-social {
@@ -347,6 +349,8 @@ button:hover, button:focus, button:active {
   .mobile-menu-btn {
     display: flex;
     z-index: 200;
+    padding: 0;
+    margin-right: 0;
   }
 }
 
@@ -354,6 +358,12 @@ button:hover, button:focus, button:active {
   .logo-container {
     margin-left: 0;
     margin-right: 0;
+    align-items: flex-end;
+    padding-bottom: 0.3rem;
+  }
+  
+  .company-name {
+    margin-bottom: 6px;
   }
   
   .company-name h1 {
@@ -362,6 +372,12 @@ button:hover, button:focus, button:active {
   
   .company-name h1 span {
     font-size: 0.9rem;
+    color: var(--primary-blue);
+  }
+  
+  .company-name h1::after {
+    width: 100%;
+    bottom: -3px;
   }
   
   .company-logo {
@@ -370,7 +386,7 @@ button:hover, button:focus, button:active {
   
   .btn-primary, .btn-blue {
     padding: 0.7rem 1.2rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem !important;
     width: 100%;
     text-align: center;
   }
@@ -386,11 +402,21 @@ button:hover, button:focus, button:active {
   .navbar.scrolled {
     padding: 0.7rem 0;
   }
+
+  .btn-primary svg {
+    top: 0;
+    right: 5px;
+  }
 }
 
 @media (max-width: 480px) {
   .logo-container {
     margin-left: 0;
+    padding-bottom: 0.2rem;
+  }
+  
+  .company-name {
+    margin-bottom: 4px;
   }
   
   .company-name h1 {
@@ -399,6 +425,7 @@ button:hover, button:focus, button:active {
   
   .company-name h1 span {
     font-size: 0.85rem;
+    color: var(--primary-blue);
   }
   
   .company-logo {
@@ -417,6 +444,16 @@ button:hover, button:focus, button:active {
 
   .navbar.scrolled .company-logo {
     height: 50px;
+  }
+
+  .btn-primary svg {
+    top: 0;
+    right: 5px;
+  }
+  
+  .mobile-menu-btn {
+    padding: 0;
+    margin-right: 0;
   }
 }
 
@@ -455,6 +492,11 @@ button:hover, button:focus, button:active {
     margin-right: 1rem;
     flex: 0 0 auto;
     max-width: 200px;
+    padding-bottom: 0.4rem;
+  }
+  
+  .company-name {
+    margin-bottom: 6px;
   }
   
   .company-name h1 {
@@ -464,6 +506,7 @@ button:hover, button:focus, button:active {
   
   .company-name h1 span {
     font-size: 0.7rem;
+    color: var(--primary-blue);
   }
   
   .nav-menu {
@@ -489,7 +532,7 @@ button:hover, button:focus, button:active {
   
   .btn-primary, .btn-blue {
     padding: 0.7rem 1.2rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem !important;
   }
   
   .nav-buttons {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/NavBar.css';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import { scrollToTop } from '../utils/scrollToTop';
 
 const NavBar: React.FC = () => {

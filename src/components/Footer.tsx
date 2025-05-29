@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import revolvoLogo from '../assets/img/revolvo_logo.png';
 import BubbleEffect from './BubbleEffect';
 import { scrollToTop } from '../utils/scrollToTop';
