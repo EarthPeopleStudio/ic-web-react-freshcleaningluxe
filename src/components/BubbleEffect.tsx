@@ -26,19 +26,19 @@ const BubbleEffect: React.FC<BubbleEffectProps> = ({
       container: HTMLDivElement,
       containerWidth: number,
       containerHeight: number,
-      minSize: number,
-      maxSize: number,
-      speed: number,
-      colors: string[]
+      minBubbleSize: number,
+      maxBubbleSize: number,
+      bubbleSpeed: number,
+      bubbleColors: string[]
     ) => {
       const bubble = document.createElement('div');
       bubble.className = 'bubble';
       
       // Random properties
-      const size = Math.random() * (maxSize - minSize) + minSize;
+      const size = Math.random() * (maxBubbleSize - minBubbleSize) + minBubbleSize;
       const left = Math.random() * (containerWidth - size);
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      const animationDuration = (Math.random() * 10 + speed) + 's';
+      const color = bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
+      const animationDuration = (Math.random() * 10 + bubbleSpeed) + 's';
       const animationDelay = (Math.random() * 10) + 's';
       
       // Set bubble styles
@@ -56,11 +56,11 @@ const BubbleEffect: React.FC<BubbleEffectProps> = ({
       setTimeout(() => {
         if (container.contains(bubble)) {
           container.removeChild(bubble);
-          createBubble(container, containerWidth, containerHeight, minSize, maxSize, speed, colors);
+          createBubble(container, containerWidth, containerHeight, minBubbleSize, maxBubbleSize, bubbleSpeed, bubbleColors);
         }
       }, (parseFloat(animationDuration) + parseFloat(animationDelay)) * 1000);
     },
-    [minSize, maxSize, speed, colors]
+    [] // Remove unnecessary dependencies
   );
 
   useEffect(() => {

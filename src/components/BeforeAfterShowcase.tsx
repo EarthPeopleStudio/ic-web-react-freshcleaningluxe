@@ -2,17 +2,17 @@ import React from 'react';
 import BeforeAfterSlider from './BeforeAfterSlider';
 import '../styles/BeforeAfterShowcase.css';
 
-// Import before/after images
-import bathtubBefore from '../assets/img/bathtub_before.png';
-import bathtubAfter from '../assets/img/bathtub_after.png';
-import garageBefore from '../assets/img/garage_before.png';
-import garageAfter from '../assets/img/garage_after.png';
-import grillBefore from '../assets/img/grill_before.png';
-import grillAfter from '../assets/img/grill_after.png';
-import kitchenBefore from '../assets/img/kitchen_before.png';
-import kitchenAfter from '../assets/img/kitchen_after.png';
-import stoveBefore from '../assets/img/stove_before.png';
-import stoveAfter from '../assets/img/stove_after.png';
+// Import before/after images - using require for webpack
+const bathtubBefore = require('../assets/img/bathtub_before.png');
+const bathtubAfter = require('../assets/img/bathtub_after.png');
+const garageBefore = require('../assets/img/garage_before.png');
+const garageAfter = require('../assets/img/garage_after.png');
+const grillBefore = require('../assets/img/grill_before.png');
+const grillAfter = require('../assets/img/grill_after.png');
+const kitchenBefore = require('../assets/img/kitchen_before.png');
+const kitchenAfter = require('../assets/img/kitchen_after.png');
+const stoveBefore = require('../assets/img/stove_before.png');
+const stoveAfter = require('../assets/img/stove_after.png');
 
 interface CleaningCase {
   title: string;

@@ -42,18 +42,20 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       }
     };
     
-    if (afterImageRef.current) {
-      afterImageRef.current.addEventListener('load', handleImageLoad);
+    // Store a reference to the current DOM element
+    const imageElement = afterImageRef.current;
+    
+    if (imageElement) {
+      imageElement.addEventListener('load', handleImageLoad);
       
       // If the image is already loaded
-      if (afterImageRef.current.complete) {
+      if (imageElement.complete) {
         handleImageLoad();
       }
     }
     
     return () => {
-      // Create a local variable to keep reference to afterImageRef.current
-      const imageElement = afterImageRef.current;
+      // Use the stored reference in cleanup, not afterImageRef.current
       if (imageElement) {
         imageElement.removeEventListener('load', handleImageLoad);
       }
