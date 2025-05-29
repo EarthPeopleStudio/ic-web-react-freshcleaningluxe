@@ -98,10 +98,16 @@ const Footer: React.FC = () => {
             <Link to="/cookie-policy" onClick={handleNavClick}>Cookie Policy</Link>
           </div>
           <div className="footer-powered-by">
-            <span>Powered by</span>
-            <a href="https://revolvo.tech" target="_blank" rel="noopener noreferrer" aria-label="Revolvo Tech - Web Development Agency">
-              <img src={revolvoLogo} alt="Revolvo" />
-              <span className="visually-hidden">Revolvo Tech</span>
+            <span>Developed by</span>
+            <a 
+              href="https://revolvo.tech/?utm_source=freshcleaningluxe&utm_medium=footer_credit" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Revolvo Tech - Web Development Agency"
+              title="See more of our work"
+            >
+              <span>Revolvo Tech</span>
+              <img src={revolvoLogo} alt="Revolvo Tech Web Design & Development Logo" />
             </a>
           </div>
         </div>

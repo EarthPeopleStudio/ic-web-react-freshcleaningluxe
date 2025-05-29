@@ -7,21 +7,39 @@
     <meta name="theme-color" content="#0062cc" />
     <meta
       name="description"
-      content="Fresh Cleaning Luxe offers premium cleaning services in Utah. Residential & commercial cleaning, move-in/out services, deep cleaning & more. Book now!"
+      content="Top-rated cleaning services in Salt Lake City, Provo & Ogden, Utah. Fresh Cleaning Luxe offers deep cleaning, house cleaning, commercial cleaning, move-in/out services. Family-owned, eco-friendly, 100% satisfaction guaranteed. Call now!"
     />
-    <meta name="keywords" content="cleaning services Utah, house cleaning Utah, commercial cleaning Utah, Fresh Cleaning Luxe, Utah cleaners, home cleaning services, office cleaning Utah, move in cleaning, move out cleaning, deep cleaning services" />
+    <meta name="keywords" content="cleaning services Utah, house cleaning Salt Lake City, commercial cleaning Provo, office cleaning Ogden, Utah cleaners, deep cleaning Utah, move in cleaning services, move out cleaning services, residential cleaning, janitorial services, eco-friendly cleaning, affordable cleaning Utah, professional cleaners, best cleaning service Utah, Fresh Cleaning Luxe" />
     <meta name="author" content="Fresh Cleaning Luxe, LLC" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="geo.region" content="US-UT" />
+    <meta name="geo.placename" content="Salt Lake City, Provo, Ogden" />
+    <meta name="geo.position" content="40.7608;-111.8910" />
+    <meta name="ICBM" content="40.7608, -111.8910" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Fresh Cleaning Luxe | Premium Cleaning Services in Utah" />
-    <meta property="og:description" content="Professional cleaning services for homes and businesses in Utah. Reliable, thorough, and customized to your needs." />
-    <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
+    <meta property="og:description" content="Top-rated cleaning services in Salt Lake City, Provo & all Utah areas. Residential & commercial cleaning with 100% satisfaction guarantee. Book your cleaning today!" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
     <meta property="og:url" content="https://freshcleaningluxe.com" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fresh Cleaning Luxe" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fresh Cleaning Luxe | Premium Cleaning Services in Utah" />
+    <meta name="twitter:description" content="Top-rated cleaning services in Salt Lake City, Provo & all Utah areas. Book your professional cleaning today!" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.jpg" />
+    
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="canonical" href="https://freshcleaningluxe.com" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Fresh Cleaning Luxe | Professional Cleaning Services in Utah</title>
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Fresh Cleaning Luxe | Professional Cleaning Services in Salt Lake City, Utah</title>
     
     <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
@@ -29,9 +47,15 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Fresh Cleaning Luxe",
-      "image": "%PUBLIC_URL%/logo192.png",
+      "image": "https://freshcleaningluxe.com/logo192.png",
+      "logo": "https://freshcleaningluxe.com/logo192.png",
+      "@id": "https://freshcleaningluxe.com",
       "url": "https://freshcleaningluxe.com",
       "telephone": "+1-435-123-4567",
+      "email": "info@freshcleaningluxe.com",
+      "priceRange": "$$",
+      "description": "Professional cleaning services in Salt Lake City, Provo, Ogden and all Utah areas. Residential and commercial cleaning, deep cleaning, move-in/out services.",
+      "slogan": "Making Utah Homes & Businesses Spotless",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "123 Main Street",
@@ -45,25 +69,128 @@
         "latitude": 40.7608,
         "longitude": -111.8910
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ],
       "sameAs": [
         "https://www.facebook.com/freshcleaningluxe",
-        "https://www.instagram.com/freshcleaningluxe"
+        "https://www.instagram.com/freshcleaningluxe",
+        "https://twitter.com/freshcleaningut",
+        "https://www.yelp.com/biz/fresh-cleaning-luxe-salt-lake-city"
       ],
-      "priceRange": "$$",
-      "servesCuisine": "Cleaning Services"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Cleaning",
+              "description": "Complete home cleaning services in Salt Lake City and surrounding areas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Cleaning",
+              "description": "Office and business cleaning services in Utah"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Deep Cleaning",
+              "description": "Thorough deep cleaning for homes and businesses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Move In/Out Cleaning",
+              "description": "Complete cleaning services for moving in or out of properties"
+            }
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Salt Lake City",
+          "sameAs": "https://en.wikipedia.org/wiki/Salt_Lake_City"
+        },
+        {
+          "@type": "City",
+          "name": "Provo",
+          "sameAs": "https://en.wikipedia.org/wiki/Provo,_Utah"
+        },
+        {
+          "@type": "City",
+          "name": "Ogden",
+          "sameAs": "https://en.wikipedia.org/wiki/Ogden,_Utah"
+        },
+        {
+          "@type": "State",
+          "name": "Utah",
+          "sameAs": "https://en.wikipedia.org/wiki/Utah"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What cleaning services does Fresh Cleaning Luxe offer in Utah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fresh Cleaning Luxe offers a wide range of cleaning services in Utah including residential cleaning, commercial cleaning, deep cleaning, move-in/out cleaning, post-construction cleaning, and specialized cleaning services tailored to your needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas in Utah does Fresh Cleaning Luxe serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fresh Cleaning Luxe serves Salt Lake City, Provo, Ogden, and surrounding areas throughout Utah. We provide professional cleaning services to homes and businesses across the state."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does house cleaning cost in Utah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cleaning costs in Utah vary based on home size, service type, and specific requirements. Fresh Cleaning Luxe offers competitive rates starting at $X for standard cleaning. Contact us for a free personalized quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Fresh Cleaning Luxe insured and bonded?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Fresh Cleaning Luxe is fully insured and bonded for your protection and peace of mind. Our professional cleaning team undergoes thorough background checks and training."
+          }
+        }
+      ]
     }
     </script>
   </head>

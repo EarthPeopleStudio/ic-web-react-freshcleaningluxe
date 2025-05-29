@@ -80,7 +80,7 @@ const SparkleEffect: React.FC<SparkleEffectProps> = ({
       const size = 3 + Math.random() * 9;
       
       // Randomize animation delay for more natural feel
-      const delay = Math.random() * 3;
+      const delay = Math.random() * 1; // Reduced from 3 to 1 second max
       
       newSparkles.push({
         id: i,
@@ -100,7 +100,7 @@ const SparkleEffect: React.FC<SparkleEffectProps> = ({
       const x = Math.random() * edgeMargin;
       const y = Math.random() * containerHeight;
       const size = 3 + Math.random() * 9;
-      const delay = Math.random() * 3;
+      const delay = Math.random() * 1; // Reduced from 3 to 1 second max
       
       newSparkles.push({
         id: sparkleCount + i,
@@ -131,7 +131,7 @@ const SparkleEffect: React.FC<SparkleEffectProps> = ({
             opacity: 0, // Start invisible
             animation: isFadingOut 
               ? `fadeOut 0.7s ease-out forwards` 
-              : `sparkle 3s ease-in-out infinite, pulse 2s ease-in-out infinite, fadeIn 1s ease-in-out forwards ${sparkle.delay}s`
+              : `sparkle 3s ease-in-out infinite, pulse 2s ease-in-out infinite, fadeIn 0.2s ease-in-out forwards ${sparkle.delay * 0.3}s`
           }}
         />
       ))}
